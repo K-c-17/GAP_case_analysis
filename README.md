@@ -31,46 +31,108 @@ The repository aims to answer the following questions through the provided analy
 
 ---
 
+## Contents of the Scripts Directory
+
+The `scripts` directory contains the following scripts:
+
+1. **Sentiment Analysis of NYT Articles**: Scripts that extract and analyze sentiment from New York Times articles related to GAP Inc., Old Navy, and Banana Republic.
+
+2. **Google Trends Extraction**: Scripts to extract and process Google Trends data for GAP Inc. and its associated brands to identify popular search patterns.
+
+3. **Ratings Data Scraping**: Scripts to scrape product ratings and review data for GAP Inc., Nautica, and Banana Republic from Amazon's website.
+
+---
+
 ## Repository Structure
 
 ```
-/data
-    - Sample data collected from web sources for analysis
 /scripts
     - Data scraping and analysis scripts
     - Predictive modeling and insights generation
 /reports
     - Executive summary
     - Slide deck presentation
-/pre-recorded-video
-    - Final presentation video with all team members
 ```
 
 ---
 
-## How to Run the Code
+## Requirements
 
-1. Clone the repository to your local machine.
-   ```
-   git clone https://github.com/your-repository.git
-   ```
+To run these scripts, you will need the following Python packages:
 
-2. Install the necessary dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+- `requests`: For making HTTP requests to web pages (e.g., Amazon for web scraping, Google Trends).
+- `json`: For handling JSON data responses from APIs.
+- `urllib`: For working with URLs, handling errors, and parsing data.
+- `pprint`: For printing JSON data in a more readable format.
+- `time`: For adding delays and handling time-related functions.
+- `azure`: For Azure-related services (if applicable).
+- `BeautifulSoup4`: For parsing HTML content when scraping data.
+- `pandas`: For data manipulation and analysis.
+- `matplotlib` and `seaborn`: For data visualization.
+- `pytrends`: For interacting with the Google Trends API.
+- `tweepy`: For Twitter API interactions.
+- `textblob`: For sentiment analysis.
+- `numpy`: For numerical computations.
+- `selenium`: For web browser automation (e.g., scraping dynamic content).
+- `statsmodels`: For statistical models and hypothesis testing.
+- `scikit-learn`: For machine learning models and evaluation metrics.
 
-3. Run the data scraping script:
-   ```
-   python scripts/data_scraping.py
-   ```
+You can install these packages using pip by running the following command:
 
-4. Run the analysis script to generate insights:
-   ```
-   python scripts/analyze_data.py
-   ```
+```bash
+pip install -r requirements.txt
 
-5. View the results in the output folder, where the final CSV files and charts will be stored.
+
+
+---
+
+## Running the Scripts
+
+### 1. Sentiment Analysis of NYT Articles
+
+- Navigate to the `scripts` directory.
+- Run the sentiment analysis script using Python:
+
+```bash
+python Gap NYT Sentiment Analysis.ipynb
+python Banana Republic NYT Sentiment Project.ipynb
+python Competitor NYT Sentiment Analysis.ipynb
+python Old Navy NYT Sentiment Analysis.ipynb
+```
+
+This script will extract articles related to GAP, Old Navy, and Banana Republic from the New York Times and perform sentiment analysis on the content.
+
+### 2. Google Trends Data Extraction
+
+- Navigate to the `scripts` directory.
+- Ensure you have set up a Google API key for the Google Trends API.
+- Run the Google Trends extraction script:
+
+```bash
+python dextract_google_trends.ipynb
+```
+
+This script will fetch Google Trends data related to GAP and its associated brands, saving it in a structured format for analysis.
+
+### 3. Ratings Data Scraping from Amazon
+
+- Navigate to the `scripts` directory.
+- Run the scraping script to get ratings data for GAP, Nautica, and Banana Republic products from Amazon:
+
+```bash
+python Walmart Gap Clothes Reviews.ipynb
+python dextract_ratings_analysis_BRepublic.ipynb
+python dextract_ratings_analysis_GAP.ipynb
+python dextract_ratings_analysis_Nautica.ipynb
+```
+
+This script will extract product ratings and reviews data from Amazon, which can then be used for further analysis.
+
+## Additional Notes
+
+- Make sure you comply with the terms and conditions of the websites (e.g., Amazon, New York Times) while scraping data.
+- When using the Google Trends API, ensure your API key is kept secure and not shared publicly.
+- If you encounter any issues or need further assistance, please refer to the documentation or reach out.
 
 ---
 
@@ -79,5 +141,3 @@ The repository aims to answer the following questions through the provided analy
 The analysis provided in this repository offers insights into how Gap Inc. can use big data to predict consumer trends, streamline operations, and balance creative direction with data analytics across its primary brands. The findings and methodologies here can support the company's broader strategy to remain competitive in the fast-evolving retail landscape.
 
 ---
-
-
